@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Login
+      uses: docker/login-action@v2
+      with:
+        username: sathwikreddy
+        password: Test@123456
+        
     - name: Checkout code
       uses: actions/checkout@v2
 
