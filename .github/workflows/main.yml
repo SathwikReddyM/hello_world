@@ -15,7 +15,7 @@ jobs:
       with:
         username: sathwikreddy
         password: Test@123456
-        
+
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -34,3 +34,6 @@ jobs:
 
     - name: Start New Docker Container
       run: docker run -p 5000:5000 --name mycontainer sathwikreddy/myimage:latest
+
+    - name: Run Flask application
+      run: docker exec mycontainer python app.py
